@@ -23,11 +23,7 @@
   * 느린 인터넷
 
 ## References
-
-[웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
-
-[웹 접근성의 이해, 이선주](https://www.edwith.org/web-accessibility/lecture/46005/)
-
-[제 7회 널리 세미나](/)
-
-[위키백과](https://ko.wikipedia.org/wiki/%EC%A0%91%EA%B7%BC%EC%84%B1)
+* [웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
+* [웹 접근성의 이해, 이선주](https://www.edwith.org/web-accessibility/lecture/46005/)
+* [제 7회 널리 세미나](/)
+* [위키백과](https://ko.wikipedia.org/wiki/%EC%A0%91%EA%B7%BC%EC%84%B1)
