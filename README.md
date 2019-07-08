@@ -1,8 +1,6 @@
-# study-comprehension-accessibility
-
+# 웹 접근성
 
 ## 웹 접근성의 이해
-
 * Web accessibility(웹 접근성)이란?
   * **장애를 가진 사람과 장애를 가지지 않은 사람 모두가 웹사이트를 이용할 수 있게 하는 방식을 가리킨다.** 사이트가 올바르게 설계되어 개발되고 편집되어 있을 때 모든 사용자들은 정보와 기능에 동등하게 접근할 수 있다.
 
@@ -27,6 +25,9 @@
 ## References
 
 [웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
+
 [웹 접근성의 이해, 이선주](https://www.edwith.org/web-accessibility/lecture/46005/)
+
 [제 7회 널리 세미나](/)
+
 [위키백과](https://ko.wikipedia.org/wiki/%EC%A0%91%EA%B7%BC%EC%84%B1)
