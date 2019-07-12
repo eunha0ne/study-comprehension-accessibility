@@ -304,22 +304,22 @@
 ### 19. 콘텐츠의 선형 구조
 **콘텐츠는 논리적인 순서로 제공해야 한다.**
 * 메뉴와 내용을 따로 마크업하는 경우 스크린리더 사용하자는 메뉴를 다 읽어주고 나서야 내용을 확인할 수 있기 때문에 어떤 메뉴에 대한 내용인지 인식할 수 없다.
-  * 1) 탭1 제목 > 탭1 내용 > 탭2 제목 > 탭2 내용
+  * 탭1 제목 > 탭1 내용 > 탭2 제목 > 탭2 내용
   ```HTML
   <a href="…">상품</a>
   <div>상품 내용</div>
   <a href="…">쇼핑몰</a>
   <div>쇼핑몰 내용</div>
   ```
-  * 2) 해당 탭 콘텐츠에 제목 제목
+  * 해당 탭 콘텐츠에 제목 제목
   ```html
   <ul class="category">
-      <li><a href="…">상품</a></li>
+    <li><a href="…">상품</a></li>
       …
   </ul>
   <div class="flick-container">
-      <h2 class="blind">상품</h2>
-       상품 내용
+    <h2 class="blind">상품</h2>
+    상품 내용
   </div>
   ```
 * 제목 > 내용 > 더 보기 콘텐츠 구조
@@ -346,71 +346,71 @@
   * caption으로 제목을 제공, table의 summary 속성으로 요약 정보를 제공
   ```HTML
   <table summary="부서별 직원 수, 합계 정보">
-	<caption>직원 관리 현황 표</caption>
-	<thead>
-		<tr>
-			<th scope="col">번호</th>
-			<th scope="col">부서</th>
-			<th scope="col">직원 수</th>
-		</tr>
-	</thead>
-	<tfoot>
-		<tr>
-			<th scope="row">합계</th>
-			<td></td>
-			<td>15명</td>
-		</tr>
-	</tfoot>
-	<tbody>
-		<tr>
-			<td>1</td>
-			<td>총무부</td>
-			<td>5명</td>
-		</tr>
+  <caption>직원 관리 현황 표</caption>
+  <thead>
+    <tr>
+      <th scope="col">번호</th>
+      <th scope="col">부서</th>
+      <th scope="col">직원 수</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th scope="row">합계</th>
+      <td></td>
+      <td>15명</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>총무부</td>
+      <td>5명</td>
+    </tr>
     ...
   ```
 * HTML5
   * caption에 제목과 요약 정보를 모두 제공
   ```HTML
   <table>
-  	<caption>
-  		<strong>직원 관리 현황 표</strong>
-  		<span>부서별 직원 수, 합계 정보</span>
-  	</caption>
-  	<thead>
-  		<tr>
-  			<th scope="col">번호</th>
-  			<th scope="col">부서</th>
-  			<th scope"col">직원 수</th>
-  		</tr>
-  	</thead>
-  	<tbody>
-  		<tr>
-  			<td>1</td>
-  			<td>총무부</td>
-  			<td>5명</td>
-  		</tr>
+    <caption>
+      <strong>직원 관리 현황 표</strong>
+      <span>부서별 직원 수, 합계 정보</span>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">번호</th>
+        <th scope="col">부서</th>
+        <th scope"col">직원 수</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>총무부</td>
+        <td>5명</td>
+      </tr>
       ...
   ```
 * 복잡한 표
   * id와 headers 속성을 이용해서 마크업
   ```HTML
   <thead>
-		<tr>
-			<th rowspan="2" scope="col" id="date">기준일</th>
-			<th colspan="2" scope="col" id="gsale">경기도 매매가</th>
-		</tr>
-		<tr>
-			<th scope="col" id="price">면적단가</th>
-			<th scope="col" id="change">변동액</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<th scope="row" id="d20181020">2018.10.20</th>
-			<td headers="date d20181020 gsale price">902</td>
-			<td headers="date d20181020 gsale change">유지 0</td>
-		</tr>
+    <tr>
+      <th rowspan="2" scope="col" id="date">기준일</th>
+      <th colspan="2" scope="col" id="gsale">경기도 매매가</th>
+    </tr>
+    <tr>
+      <th scope="col" id="price">면적단가</th>
+      <th scope="col" id="change">변동액</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row" id="d20181020">2018.10.20</th>
+      <td headers="date d20181020 gsale price">902</td>
+      <td headers="date d20181020 gsale change">유지 0</td>
+    </tr>
     ...
   ```
   * 테이블의 902라는 값이 적힌 셀을 읽을 때, 스크린리더에서 속성과 아이디값을 참조함
