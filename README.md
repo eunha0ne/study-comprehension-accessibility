@@ -67,22 +67,22 @@
 ```html
 <img src="graph.png" alt="" />
 <table class="blind">
-    <caption>...</caption>
-        <thead>
-	 <tr>
-	    <th scope="col">년도</th>
-	    <th scope="col">학과</th>
-	    <th scope="col">지원 수</th>
-	</tr>
-    </thead>
-    <tbody>
-       <tr>
-           <td>2003</td>
-           <td>언어학</td>
-           <td>10200명</td>
-       </tr>
-     ...
-    </tbody>
+  <caption>...</caption>
+  <thead>
+    <tr>
+      <th scope="col">년도</th>
+      <th scope="col">학과</th>
+      <th scope="col">지원 수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+       <td>2003</td>
+       <td>언어학</td>
+       <td>10200명</td>
+    </tr>
+    ...
+  </tbody>
 </table>
 ```
 
@@ -235,7 +235,7 @@
 * 독립적 이미지 링크
 ```html
 <a href="#">
-    <img src="btn_next.png" alt="다음 콘텐츠 보기">
+  <img src="btn_next.png" alt="다음 콘텐츠 보기">
 </a>
 ```
 * 독립적 배경 이미지 링크
@@ -245,15 +245,15 @@
 * 썸내일 링크
 ```html
 <a href="…">
-    <img src="thumb01.jpg" alt="">
-    <span>웨딩 사진을 모티브로 만든 도일리 #프랑스자수</span>
+  <img src="thumb01.jpg" alt="">
+  <span>웨딩 사진을 모티브로 만든 도일리 #프랑스자수</span>
 </a>
 ```
 * 명확한 링크 제공
 ```html
 <p>
-    더 자세한 사항을 보려면
-    <a href="#">여기</a>를 클릭하세요.
+  더 자세한 사항을 보려면
+  <a href="#">여기</a>를 클릭하세요.
 </p>
 ```
 위에서 `여기`는 오류로 진단. 링크의 용도나 목적을 알 수 있도록 적절한 링크 텍스트를 제공해야 함. 아래 처럼 텍스트 숨김 처리를 통해서 제공해주는 것이 좋음.
@@ -421,7 +421,68 @@
   * 레이아웃 테이블은 구조적으로 마크업 하는 것이 좋다. 테이블로 마크업하는 경우, 데이터 테이블로 착각하여 혼란을 줄 수 있기 때문
 
 ### 21. 레이블 제공
+**사용자 입력에는 대응하는 레이블을 제공해야 한다.**
+* 레이블이란?
+  * 사용자 입력의 용도 또는 역활에 대한 설명을 뜻함.
+* 레이블이 시각적으로 노출되어 있는 경우
+  * 레이블과 입력 서식이 1:1 매칭인 경우
+  ```HTML
+  <label for="user_id">아이디</label>
+  <input type="text" id="user_id" />
 
+  <label for="user_pw">비밀번호</label>
+  <input type="text" id="user_pw" />
+  ```
+  * 레이블과 선택 서식이 1:1 매칭인 경우
+  ```HTML
+  <label for="user_gender">성별</label>
+  <select id="user_gender">
+      <option value selected>성별</option>
+      <option value="0">남자</option>
+      <option value="1">여자</option>
+  </select>
+  ```
+  * 레이블과 라디오 버튼, 체크 박스가 1:1 매칭인 경우
+  ```HTML
+  <input type="radio" id="gender_male" />
+  <label for="gender_male">남자</label>
+  <input type="radio" id="gender_female" />
+  <label for="gender_female">여자</label>
+
+  <input type="checkbox" id="agree" />
+  <label for="agree">이용약관에 동의합니다.</label>
+  ```
+  * 레이블과 입력 서식이 1:다 매칭인 경우 => 각 입력 서식에 대해 title을 제공
+  ```HTML
+  <input type="text" title="생년월일 중 년 4자리 입력" />
+  <input type="text" title="생년월일 중 월 입력" />
+  <input type="text" title="생년월일 중 일 입력" />
+  ```
+* 레이블이 시각적으로 노출되지 않은 경우 -> 각 입려 서식에 대해 title을 제공
+```HTML
+<input type="text" title="아이디" />
+<input type="text" title="비밀번호" />
+```
+* 레이블과 타이틀의 중복 제공을 피하고, 1:1 매칭인 경우에는 우선적으로 레이블을 제공하고 이외의 경우에는 타이틀로 설명을 제공한다.
+
+### 22. 오류 정정
+**입력 오류를 정정할 수 있는 방법을 제공해야 한다.**
+* 작성된 내용이 삭제되지 않고 오류가 있는 부분만을 수정할 수 있도록 한다.
+* 오류가 발생한 원인을 알려준다.
+* 오류 발생 시점으로 초점을 이동 시킨다.
+
+### 23. 마크업 오류 방지
+**마크업 언어의 요소는 열고 닫음, 중첩 관계 및 속성 선언에 오류가 없어야 한다.**
+* 준수 사항
+  * 요소의 열고 닫음 확인
+  * 요소의 중첩 확인
+  * 중복된 속성 사용 확인
+  * id 값 중복 확인
+
+### 24. 웹 애플리케이션 접근성 준수
+**콘텐츠에 포함된 웹 애플리케이션은 접근성이 있어야 한다.**
+* 여기서 말하는 웹 애플리케이션이란 웹 콘텐츠에 포함되어 특정한 기능을 수행하도록 구성된 소프트웨어의 일종으로 예를 들어 플래시 같은 것을 말한다.
+  * 접근성이 어려운 플래시의 경우 HTML 버전을 선택할 수 있는 대체 수단이나 대체 텍스트를 제공해야 한다.
 
 ## References
 * [웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
