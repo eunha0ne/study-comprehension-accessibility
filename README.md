@@ -484,6 +484,35 @@
 * 여기서 말하는 웹 애플리케이션이란 웹 콘텐츠에 포함되어 특정한 기능을 수행하도록 구성된 소프트웨어의 일종으로 예를 들어 플래시 같은 것을 말한다.
   * 접근성이 어려운 플래시의 경우 HTML 버전을 선택할 수 있는 대체 수단이나 대체 텍스트를 제공해야 한다.
 
+## 웹 접근성 진단 도구
+* [Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/) (CCA)
+  * 전경 색과 배경색의 명도 대비를 확인
+  * 명도 대비는 최소 3:1 이상이 되도록 구현
+* [KWCAG a11y inspector](https://chrome.google.com/webstore/detail/kwcag-a11y-inspector/ngcmkfaolkgkjbddhjnhgoekgaamjibo?hl=ko): 크롬 확장 프로그램
+  * 컨트롤의 대각선 길이를 측정해주는 프로그램
+  * 컨트롤 대각선 크기를 6mm 이상으로 구현
+* [OpenWAX](https://chrome.google.com/webstore/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe?hl=ko): 크롬 확장 프로그램
+  * 접근성 진단 프로그램
+  * 자동 진단이 정확하지는 않아 수동 진단 병행 필요
+* [W3C Validation](https://validator.w3.org/)
+  * 웹 표준 검사: 접근성 오류, 마크업 오류
+
+## 스크린리더
+* 스크린을 읽어주는 사용자 도구
+  * 기기에 따라 제공되는 스크린리더가 다르며, 읽어주는 방식에 차이가 있음
+* OS에 따른 스크린리더의 종류
+  * 윈도우 (설치형)
+    * 센스리더 베이직 6.5
+    * [NVDA Version](https://www.nvaccess.org/download/) 2018.4
+  * Android (시스템 제공)
+    * Talkback
+    * Voice Assistant
+  * MAC (시스템 제공)
+    * VoiceOver
+  * iOS (시스템 제공)
+   * VoiceOver
+
+
 ## References
 * [웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
 * [웹 접근성의 이해, 이선주](https://www.edwith.org/web-accessibility/lecture/46005/)
