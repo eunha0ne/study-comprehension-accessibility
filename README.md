@@ -497,6 +497,22 @@
 * [W3C Validation](https://validator.w3.org/)
   * 웹 표준 검사: 접근성 오류, 마크업 오류
 
+## 스크린리더
+* 스크린을 읽어주는 사용자 도구
+  * 기기에 따라 제공되는 스크린리더가 다르며, 읽어주는 방식에 차이가 있음
+* OS에 따른 스크린리더의 종류
+  * 윈도우 (설치형)
+    * 센스리더 베이직 6.5
+    * [NVDA Version](https://www.nvaccess.org/download/) 2018.4
+  * Android (시스템 제공)
+    * Talkback
+    * Voice Assistant
+  * MAC (시스템 제공)
+    * VoiceOver
+  * iOS (시스템 제공)
+   * VoiceOver
+
+
 ## References
 * [웹 접근성 연구소](https://www.wah.or.kr:444/Accessibility/define.asp)
 * [웹 접근성의 이해, 이선주](https://www.edwith.org/web-accessibility/lecture/46005/)
